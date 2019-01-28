@@ -6,5 +6,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'homework4';
+  title = 'lesson5';
+  name = 'Some name';
+  isActive = true;
+  constructor() {
+    setTimeout(() => {
+      // this.name = 'new value';
+      this.isActive = false;
+    }, 2000);
+  }
+  onNameChangeHandler(value) {
+    console.log(value);
+  }
 }
