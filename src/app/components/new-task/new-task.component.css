@@ -1,0 +1,68 @@
+.flex-container {
+    display: flex;
+    justify-content: space-around;
+    margin: 30px;
+}
+
+form {
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0px 5px 70px lightgrey;
+    background-color: #f7f7f7;
+    height: 50px;
+}
+
+button {
+    border: none;
+    color: rgb(255, 255, 255);
+    background-color: rgb(60, 60, 60);
+    padding: 4px 10px;
+    height: 35px;
+}
+
+button:disabled {
+    opacity: 0.4;
+}
+
+.wrapper div {
+    font-size: 12px;
+    color: red;
+}
+
+input {
+    border: none;
+    padding: 7px;
+    box-sizing: border-box;
+}
+
+input:focus {
+    outline: none;
+    border-bottom: 3px solid #5786ef;
+}
+
+.border-bottom-red:focus, .border-bottom-red {
+    border-bottom: 3px solid red;
+}
+
+@media (max-width: 568px) {
+    .flex-container {
+        flex-direction: column;
+        justify-content: center;
+    }
+    form {
+        height: 170px;
+    }
+    input {
+        width: 100%;
+        margin-bottom: 25px;
+    }
+    .wrapper {
+        position: relative;
+    }
+    .wrapper div {
+        margin-bottom: 10px;
+        position: absolute;
+        left: 0;
+        top: 35px;
+    }
+  }

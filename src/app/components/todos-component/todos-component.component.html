@@ -1,0 +1,11 @@
+<app-new-task (taskAdd)='onNewTaskSubmit($event)'></app-new-task>
+<table>
+    <tr>
+        <th>Title</th>
+        <th>Task</th>
+    </tr>
+    <tr *ngFor="let task of allToDos">
+        <td>{{ task.taskTitle }}</td>
+        <td>{{ task.taskDescription }}</td>
+    </tr>
+</table>

@@ -1,0 +1,12 @@
+table {
+    width: 100%;
+    overflow-x: auto;
+}
+
+th, td, li {
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    width: 50%;
+}

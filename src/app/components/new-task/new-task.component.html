@@ -1,0 +1,11 @@
+<form (ngSubmit)="onSubmitHandler(addTaskForm)" #addTaskForm="ngForm" class="flex-container" novalidate>
+  <div class="wrapper">
+    <input type="text" #title="ngModel" [(ngModel)]="newTask.taskTitle" name="taskTitle" placeholder="Enter new task title" required [ngClass]="{'border-bottom-red': title.invalid && title.dirty}">
+    <div [hidden]="title.valid || title.pristine">* Title is required</div>
+  </div>
+  <div class="wrapper">
+    <input type="text"  #description="ngModel" [(ngModel)]="newTask.taskDescription" name="taskDescription"  placeholder="Enter task" required [ngClass]="{'border-bottom-red': description.invalid && description.dirty}">
+    <div [hidden]="description.valid || description.pristine">* Description is required</div>  
+  </div>
+  <button [disabled]="addTaskForm.invalid">Add Task</button>
+</form>
